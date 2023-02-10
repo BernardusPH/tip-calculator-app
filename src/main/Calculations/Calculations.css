@@ -80,7 +80,7 @@ outline: 3px solid red !important;
 }
 
 .calculations__Tip-buttons> input[type="button"].active{
-    background-color: var(--Strong-cyan);
+    background-color: var( --Strong-cyan); 
 }
 
 

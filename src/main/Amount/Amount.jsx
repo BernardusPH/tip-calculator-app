@@ -12,7 +12,7 @@ function Amount(props) {
                     <span> / person</span>
                 </div>
                 <div className="tip-Amount-cash">
-                    ${props.tip}
+                    ${props.tip.toFixed(2)}
                 </div>
             </div>
 
@@ -24,7 +24,7 @@ function Amount(props) {
                 </div>
 
                 <div className="total-Amount-cash">
-                    ${props.total}
+                    ${props.total.toFixed(2)}
                 </div>
             </div>
             <button className={`button ${showButton?"":"disabled"} `} onClick={ showButton? props.reset:null}>Reset</button>
