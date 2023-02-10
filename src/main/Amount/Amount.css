@@ -1,0 +1,66 @@
+.Amount {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tip-Amount,
+.total-Amount {
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Amount h2 {
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.Amount span {
+    font-size: .6rem;
+    color: var(--Light-grayish-cyan);
+}
+
+.total-Amount {
+    margin-top: 2rem;
+}
+
+.tip-Amount-cash,
+.total-Amount-cash {
+    align-self: center;
+    font-size: clamp(1.3rem,4.5vw, 1.6rem);
+    color: var(--Strong-cyan);
+}
+
+.button {
+    display: block;
+    margin-top: auto;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: .4rem;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+.disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+
+@media(max-width:690px){
+    .button{
+        margin-top: 1rem;
+    }
+}

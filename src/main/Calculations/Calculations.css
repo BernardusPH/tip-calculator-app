@@ -1,0 +1,93 @@
+.calculations__Bill input,.calculations__NrPl input{
+display: block;
+}
+
+input{
+    font-size: clamp(.8rem,2.5vw,1rem);
+}
+input[type="number"]{
+    text-align: right;
+    background-color:var(--Very-light-grayish-cyan) ;
+    transition: all .1s ease-in-out;
+   
+}
+
+input[type="number"]:focus{
+    outline: 3px solid var(--Strong-cyan);
+}
+label{
+    display: block;
+    margin-bottom: .4rem;
+    font-size: .7rem;
+    color: var(--Dark-grayish-cyan);
+}
+.calculations__Bill input, .calculations__NrPl input{
+    width: 100%;
+    border: none;
+    padding: .3rem;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: .8rem center;
+
+}
+.calculations__NrPl{
+    position: relative;
+}
+.calculations__NrPl > .error-Message{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: .6rem;
+    color: red;
+}
+.input-error{
+outline: 3px solid red !important;
+}
+.calculations__Bill input{
+    background-image: url("/images/icon-dollar.svg");
+}
+.calculations__NrPl input{
+    background-image: url("/images/icon-person.svg");
+}
+
+
+.calculations__Tip{
+    margin: 2rem 0;
+}
+.calculations__Tip-buttons{
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+
+}
+.calculations__Tip-buttons>*{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+    width:30%;
+    display: block;
+    padding: .3rem;
+}
+.calculations__Tip-buttons> input[type="button"]{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    cursor: pointer;
+}
+.calculations__Tip-buttons> input[type="button"]:hover{
+ background-color: var( --Strong-cyan); 
+}
+
+.calculations__Tip-buttons> input[type="button"].active{
+    background-color: var(--Strong-cyan);
+}
+
+
+
+@media(max-width:690px){
+    .calculations__Tip-buttons>*{
+        width: 45%;
+    }
+}
+
