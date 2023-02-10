@@ -24,19 +24,19 @@ function Calculations(props) {
         <div className="calculations" >
             <div className="calculations__Bill">
                 <label htmlFor="bill">Bill</label>
-                <input id="bill" name="bill" type="number" placeholder="0" onChange={billChange} value={props.billAmount} />
+                <input min={0} id="bill" name="bill" type="number" placeholder="0" onChange={billChange} value={props.billAmount} />
             </div>
             <div className="calculations__Tip">
                 <label>Select Tip %</label>
                 <div className="calculations__Tip-buttons" >
                     {[.05, .1, .15, .25, .50].map((val, index) => <input id={val} key={val} className={props.activeButtonAmount == val ? `active` : ""} type="button" name={`button ${index}`} onClick={tipChangeHandle} value={`${val * 100}%`} />)}
-                    <input type="number" value={props.customAmount} placeholder="Custom" onChange={tipChangeHandle} />
+                    <input type="number" value={props.customAmount} placeholder="Custom" onChange={tipChangeHandle} min={0} />
                 </div>
             </div>
             <div className="calculations__NrPl">
                 <label htmlFor="nrPl">Number of People</label>
                 {props.showPeopleError ? <p className="error-Message">can't be zero</p> : ""}
-                <input id="nrPl" className={props.showPeopleError ? `input-error` : ""} name="nrPl" type="number" placeholder="0" onChange={peopleChange} value={props.peopleAmount} />
+                <input min={0} id="nrPl" className={props.showPeopleError ? `input-error` : ""} name="nrPl" type="number" placeholder="0" onChange={peopleChange} value={props.peopleAmount} />
 
             </div>
 
