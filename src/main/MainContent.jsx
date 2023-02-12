@@ -29,7 +29,7 @@ const [totalCash,setTotalTipCash]=useState(0.00)
 
 useEffect(() => {
     if (billAmount > 0 && tipAmount >= 0 && peopleAmount > 0) {
-        console.log({billAmount,tipAmount,peopleAmount});
+        
         setTipCash(parseFloat((billAmount*tipAmount/100)/peopleAmount).toFixed(2));
       
         setTotalTipCash(parseFloat((billAmount+(billAmount*tipAmount/100))/peopleAmount).toFixed(2));
