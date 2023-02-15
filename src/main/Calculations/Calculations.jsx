@@ -11,6 +11,7 @@ function Calculations(props) {
    
     function tipChangeHandle(e){
         props.tipHandle(e.target.id || e.target.value );
+        
        
     }
   
